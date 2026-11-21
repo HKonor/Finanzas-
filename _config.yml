@@ -1,0 +1,18 @@
+# Evita que el motor Liquid/Jekyll interprete los archivos Django o la documentación.
+# La vista previa pública reside en docs/.
+exclude:
+  - README.md
+  - DOCUMENTACION_TECNICA.md
+  - ESTADO_VERIFICACION_GITHUB.md
+  - SUBIR_A_GITHUB.md
+  - core
+  - finanza_project
+  - templates
+  - static
+  - .github
+  - manage.py
+  - build.sh
+  - start.sh
+  - render.yaml
+  - requirements.txt
+  - INICIAR_WINDOWS.bat
