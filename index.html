@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta name="description" content="Vista previa visual del proyecto Finanza., sistema Django de finanzas personales.">
+  <title>Finanza. — Vista previa de la interfaz</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./preview.css">
+  <script src="./preview.js" defer></script>
+</head>
+<body data-screen="usuario">
+  <div class="preview-banner" role="status">
+    <span><strong>VISTA PREVIA</strong> · Datos de ejemplo, sin sesión ni base de datos</span>
+    <nav class="preview-tabs" aria-label="Cambiar pantalla">
+      <a href="#usuario" data-target="usuario">Panel de usuario</a>
+      <a href="#administrador" data-target="administrador">Administrador</a>
+      <a href="#acceso" data-target="acceso">Inicio de sesión</a>
+    </nav>
+  </div>
+  <aside class="sidebar" aria-label="Navegación de muestra">
+    <a class="brand" href="#usuario"><span class="brand-symbol">◈</span>Finanza<span class="brand-dot">.</span></a>
+    <div class="workspace-label" id="workspace-label">MI ESPACIO FINANCIERO</div>
+    <nav class="side-nav" id="menu-user" aria-label="Menú de usuario">
+      <span class="nav-caption">PRINCIPAL</span>
+      <a class="nav-link active" href="#usuario">▦ <span>Resumen</span></a>
+      <a class="nav-link" href="#usuario">⇄ <span>Movimientos</span></a>
+      <a class="nav-link" href="#usuario">▥ <span>Presupuestos</span></a>
+      <a class="nav-link" href="#usuario">◎ <span>Ahorros</span></a>
+      <span class="nav-caption">CONTROL</span>
+      <a class="nav-link" href="#usuario">◷ <span>Gastos fijos</span></a>
+      <a class="nav-link" href="#usuario">↗ <span>Gastos variables</span></a>
+      <a class="nav-link" href="#usuario">✳ <span>Imprevistos</span></a>
+      <a class="nav-link" href="#usuario">▣ <span>Deudas y deudores</span></a>
+      <a class="nav-link" href="#usuario">▤ <span>Categorías</span></a>
+    </nav>
+    <nav class="side-nav" id="menu-admin" aria-label="Menú administrativo" hidden>
+      <span class="nav-caption">GESTIÓN</span>
+      <a class="nav-link active" href="#administrador">▦ <span>Resumen</span></a>
+      <a class="nav-link" href="#administrador">♙ <span>Usuarios</span></a>
+      <a class="nav-link" href="#administrador">▤ <span>Categorías globales</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="account-pill"><span class="avatar">D</span><span><strong id="role-name">Demo visual</strong><small id="role-detail">Usuario de ejemplo</small></span><span>›</span></div><a class="logout" href="#acceso">↪ Ver pantalla de acceso</a></div>
+  </aside>
+  <div class="main-wrap">
+    <header class="topbar">
+      <button type="button" class="mobile-menu" id="mobile-menu" aria-label="Abrir menú de vista previa">☰</button>
+      <div><small id="breadcrumb">FINANZAS PERSONALES / RESUMEN</small><div class="crumb">Una mejor forma de organizar tu dinero</div></div>
+      <span class="top-account"><span class="online-dot"></span> demo@ejemplo.local</span>
+    </header>
+    <main class="content">
+      <section id="screen-usuario" class="demo-screen" aria-label="Vista previa de panel de usuario">
+        <div class="page-head"><div><div class="eyebrow">PANEL GENERAL</div><h1>Tu panorama financiero <span class="soft-dot">.</span></h1><p>Conoce tu dinero disponible y mantén tus objetivos bajo control.</p></div><a href="#acceso" class="btn primary" title="Ver la pantalla de acceso">+ Registrar movimiento <span aria-hidden="true">↗</span></a></div>
+        <div class="date-filter" aria-label="Periodo de muestra"><strong>Periodo de consulta</strong><span class="period-pill">01/11/2026 – 30/11/2026</span><span class="muted small">Periodo de demostración: no se consultan movimientos reales.</span></div>
+        <section class="metric-grid" aria-label="Saldos de ejemplo">
+          <div class="metric-card featured"><div class="metric-label">DINERO DISPONIBLE <span>◈</span></div><strong>$24,850.00</strong><small>Balance histórico menos ahorros reservados</small><div class="shine"></div></div>
+          <div class="metric-card"><div class="metric-label">INGRESOS DEL PERIODO <span class="circle green">↗</span></div><strong>$18,500.00</strong><small class="positive">Entradas registradas</small></div>
+          <div class="metric-card"><div class="metric-label">GASTOS DEL PERIODO <span class="circle coral">↘</span></div><strong>$9,950.00</strong><small>Salidas registradas</small></div>
+          <div class="metric-card"><div class="metric-label">BALANCE DEL PERIODO <span class="circle blue">⇄</span></div><strong>$8,550.00</strong><small>Ingresos − gastos</small></div>
+        </section>
+        <div class="two-columns dashboard-columns">
+          <section class="panel"><div class="panel-top"><div><div class="eyebrow">DISTRIBUCIÓN</div><h2>¿En qué estás gastando?</h2></div><span class="tag">Ejemplo mensual</span></div><div class="bars">
+            <div class="bar-line"><div><span>Gastos fijos</span><strong>$5,200.00</strong></div><div class="bar-track"><div class="bar-fill col-blue" style="width:52.26%"></div></div></div>
+            <div class="bar-line"><div><span>Gastos variables</span><strong>$3,450.00</strong></div><div class="bar-track"><div class="bar-fill col-teal" style="width:34.67%"></div></div></div>
+            <div class="bar-line"><div><span>Imprevistos</span><strong>$1,300.00</strong></div><div class="bar-track"><div class="bar-fill col-orange" style="width:13.07%"></div></div></div>
+          </div></section>
+          <section class="panel"><div class="panel-top"><div><div class="eyebrow">ESTADO PATRIMONIAL</div><h2>Tu situación actual</h2></div></div><div class="details-list"><div><span>Balance histórico de caja</span><strong>$30,000.00</strong></div><div><span>Reservado en ahorros</span><strong>$5,150.00</strong></div><div><span>Deudas por pagar</span><strong>$2,100.00</strong></div><div><span>Cuentas por cobrar</span><strong>$900.00</strong></div><div><span>Presupuestos del periodo</span><strong>3</strong></div></div><span class="text-link">Seguimiento de deudas y ahorro</span></section>
+        </div>
+        <div class="two-columns dashboard-columns">
+          <section class="panel"><div class="panel-top"><div><div class="eyebrow">PLANIFICACIÓN</div><h2>Presupuestos</h2></div><span class="tag">Ejemplo</span></div>
+            <div class="budget-mini"><div><strong>Alimentación</strong><small>01 nov – 30 nov</small></div><div class="mini-value">$2,450.00 / $3,500.00</div><progress max="100" value="70">70%</progress></div>
+            <div class="budget-mini"><div><strong>Transporte</strong><small>01 nov – 30 nov</small></div><div class="mini-value">$850.00 / $1,400.00</div><progress max="100" value="61">61%</progress></div>
+            <div class="budget-mini"><div><strong>Entretenimiento</strong><small>01 nov – 30 nov</small></div><div class="mini-value">$920.00 / $1,000.00</div><progress max="100" value="92">92%</progress><small class="error">Cerca del límite del presupuesto</small></div>
+          </section>
+          <section class="panel"><div class="panel-top"><div><div class="eyebrow">NOTIFICACIONES</div><h2>Alertas importantes</h2></div><span class="tag">1 sin leer</span></div><div class="alert-item"><span class="alert-icon">!</span><p>El presupuesto de entretenimiento alcanzó el 92% de su límite mensual.</p></div><p class="muted small">Las alertas del sistema real se calculan con tus gastos registrados.</p></section>
+        </div>
+        <section class="panel"><div class="panel-top"><div><div class="eyebrow">ACTIVIDAD</div><h2>Últimos movimientos</h2></div><span class="tag">Datos inventados</span></div><div class="table-scroll"><table><thead><tr><th>Concepto</th><th>Categoría</th><th>Fecha</th><th>Importe</th></tr></thead><tbody><tr><td><strong>Pago de nómina</strong></td><td>Salario</td><td>15/11/2026</td><td class="money positive">+$18,500.00</td></tr><tr><td><strong>Supermercado</strong></td><td>Alimentación</td><td>16/11/2026</td><td class="money negative">−$1,250.00</td></tr><tr><td><strong>Transporte</strong></td><td>Transporte</td><td>17/11/2026</td><td class="money negative">−$350.00</td></tr></tbody></table></div></section>
+      </section>
+      <section id="screen-administrador" class="demo-screen" hidden aria-label="Vista previa administrativa">
+        <div class="page-head"><div><div class="eyebrow">ADMINISTRACIÓN</div><h1>Resumen del sistema</h1><p>Indicadores generales sin exponer movimientos financieros privados.</p></div><span class="tag">Datos inventados</span></div>
+        <section class="metric-grid admin-metrics"><div class="metric-card featured"><div class="metric-label">USUARIOS REGISTRADOS</div><strong>18</strong><small>Todos los perfiles del sistema</small></div><div class="metric-card"><div class="metric-label">CUENTAS ACTIVAS</div><strong>16</strong><small>2 cuentas inactivas</small></div><div class="metric-card"><div class="metric-label">CORREOS VERIFICADOS</div><strong>14</strong><small>4 pendientes</small></div><div class="metric-card"><div class="metric-label">MOVIMIENTOS</div><strong>126</strong><small>Solo conteo; sin datos privados</small></div></section>
+        <div class="three-mini dashboard-columns"><div class="panel stat-strip"><span>Categorías globales</span><strong>25</strong></div><div class="panel stat-strip"><span>Presupuestos creados</span><strong>31</strong></div><div class="panel stat-strip"><span>Metas de ahorro</span><strong>19</strong></div></div>
+        <section class="panel"><div class="panel-top"><div><div class="eyebrow">ACTIVIDAD</div><h2>Últimos accesos y actividad</h2></div><span class="tag">Información ficticia</span></div><div class="table-scroll"><table><thead><tr><th>Usuario</th><th>Estado</th><th>Último acceso</th><th>Última actividad</th></tr></thead><tbody><tr><td><strong>usuario1@ejemplo.local</strong></td><td><span class="status success">Activo</span></td><td>20/11/2026 18:30</td><td>20/11/2026 18:42</td></tr><tr><td><strong>usuario2@ejemplo.local</strong></td><td><span class="status success">Activo</span></td><td>19/11/2026 14:15</td><td>19/11/2026 14:32</td></tr><tr><td><strong>usuario3@ejemplo.local</strong></td><td><span class="status warning">Pendiente</span></td><td>—</td><td>—</td></tr></tbody></table></div></section>
+      </section>
+    </main>
+    <footer class="footer">Finanza. · Vista previa de interfaz · Para utilizar los módulos reales, ejecuta Django.</footer>
+  </div>
+  <div id="screen-acceso" class="demo-login demo-screen" hidden>
+    <main class="auth-wrap"><section class="auth-card"><div class="auth-logo"><span class="brand-symbol">◈</span> Finanza<span class="brand-dot">.</span></div><div class="auth-eyebrow">BIENVENIDO DE NUEVO</div><h1>Inicia sesión</h1><p>Accede a tu espacio financiero de manera segura y sencilla.</p><div class="stack-form"><div class="field"><label>Correo electrónico</label><input class="control" type="email" value="demo@ejemplo.local" readonly aria-label="Correo de muestra"></div><div class="field"><label>Contraseña</label><input class="control" type="text" value="••••••••" readonly aria-label="Contraseña de muestra"></div><a href="#usuario" class="btn primary full">Ver panel de usuario</a><a href="#administrador" class="btn outline full">Ver panel administrativo</a></div><p class="auth-foot">Vista visual, sin autenticación real. <a href="#usuario">Volver a la muestra</a></p></section></main>
+  </div>
+</body>
+</html>

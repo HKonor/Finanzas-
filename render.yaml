@@ -1,0 +1,36 @@
+# Render Blueprint: Django + PostgreSQL. Ningún secreto está en el repositorio.
+services:
+  - type: web
+    name: finanza-web
+    runtime: python
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: bash start.sh
+    healthCheckPath: /login/
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: finanza-postgres
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: 'false'
+      - key: WEB_CONCURRENCY
+        value: '2'
+      # Cuenta inicial: solo se crea cuando ADMIN_PASSWORD se configura como secreto.
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_USERNAME
+        value: administrador
+      - key: ADMIN_PASSWORD
+        sync: false
+      # En Render gratis los puertos SMTP 25,465,587 están bloqueados.
+      # Para verificación real: proveedor HTTP de correo o plan con SMTP permitido.
+      - key: EMAIL_BACKEND
+        value: django.core.mail.backends.smtp.EmailBackend
+databases:
+  - name: finanza-postgres
+    plan: free
+    databaseName: finanza
+    user: finanza_app

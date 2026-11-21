@@ -1,0 +1,32 @@
+# Secretos locales, datos personales y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+# Bases de datos, copias de seguridad e importaciones
+*.sqlite3
+*.sqlite3-*
+*.db
+*.dump
+*.sql
+*.bak
+backups/
+media/
+# Archivos generados
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+staticfiles/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/

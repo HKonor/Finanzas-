@@ -1,0 +1,31 @@
+FINANZA. — REPORTE DE COMPROBACIÓN (21/11/2026)
+
+Proyecto nuevo: Django 5.2 con modelos y migraciones 0001–0004.
+Motor utilizado en las pruebas: SQLite.
+
+COMANDOS Y RESULTADOS:
+- python manage.py check: SIN ERRORES.
+- python manage.py makemigrations --check --dry-run: No changes detected.
+- python manage.py migrate: Migraciones aplicadas correctamente.
+- python manage.py cargar_categorias: 25 categorías globales cargadas.
+- python manage.py test core: 36 pruebas ejecutadas, 36 aprobadas.
+- python manage.py crear_admin: credenciales por .env; crea administrador y exige cambio de contraseña.
+- Inicio de sesión inicial del administrador: redirige a /cuenta/password/.
+- importar_legado --apply: lectura del SQLite original en modo read-only,
+  identificó registros compatibles con una cuenta existente y, al repetir la
+  importación desde la misma ruta, NO duplicó movimientos.
+
+PROBADO: validaciones de formulario, roles, privacidad, operaciones, alertas,
+periodicidad de gastos fijos, balances, pagos, deudas, aportaciones, JSON,
+protección de rutas, sesiones, activación por correo de prueba y autenticación.
+
+NO PROBADO CON SERVICIOS EXTERNOS:
+- PostgreSQL real y su configuración específica en el equipo de destino.
+- Entrega SMTP real (las pruebas de envío emplearon backend local).
+- Despliegue en un servidor público HTTPS.
+
+NO INCLUIDOS POR SEGURIDAD: contraseñas reales, .env, base SQLite antigua,
+base temporal de pruebas, entorno virtual, pycache ni archivos temporales.
+
+Limitación consciente: la periodicidad de ingresos se guarda como información;
+no se contabiliza un ingreso futuro hasta registrar realmente el movimiento.

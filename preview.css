@@ -1,0 +1,19 @@
+/* Solo se aplica a la vista previa pública: no toca el diseño real de Django. */
+.preview-banner{position:relative;z-index:40;background:#0d1b3a;color:#c9d7fb;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 27px;font-size:12px;flex-wrap:wrap}
+.preview-banner strong{letter-spacing:1.1px;color:#fff;font-size:11px}
+.preview-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.preview-tabs a{display:inline-flex;align-items:center;justify-content:center;padding:6px 12px;border:1px solid rgba(255,255,255,.17);border-radius:30px;font-weight:650;color:#e1e9ff}
+.preview-tabs a:hover,.preview-tabs a.active{background:#fff;color:#1b48bf}
+.sidebar{top:52px}.main-wrap{padding-top:0}.demo-screen[hidden],.side-nav[hidden]{display:none!important}
+.period-pill{background:#f2f6ff;color:#3d62ba;font-size:12px;padding:7px 12px;border-radius:8px;font-weight:750}
+.demo-login{min-height:calc(100vh - 52px);background:radial-gradient(circle at 18% 20%,#e8f0ff 0,transparent 32%),radial-gradient(circle at 80% 83%,#edf6ff 0,transparent 31%),#f5f8ff}
+body[data-screen="acceso"] .sidebar,body[data-screen="acceso"] .main-wrap{display:none!important}
+body[data-screen="acceso"] .demo-login{display:block!important}
+body[data-screen="acceso"] .auth-logo .brand-dot{margin-left:-6px}
+.demo-login .auth-logo{margin-bottom:35px}
+.demo-login .auth-card{max-width:455px}
+.demo-login .auth-card .btn{margin-top:8px}
+.demo-login .auth-card input{cursor:not-allowed}
+@media(max-width:1000px){.preview-banner{padding:10px 16px}.sidebar{top:90px}}
+@media(max-width:810px){.sidebar{top:0;height:100vh}.sidebar.open{top:0}.preview-banner{gap:9px}}
+@media(max-width:550px){.preview-tabs{width:100%}.preview-tabs a{flex:1;font-size:11px;padding:6px 5px}.preview-banner{font-size:11px}}
